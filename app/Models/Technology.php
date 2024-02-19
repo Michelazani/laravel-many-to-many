@@ -13,4 +13,8 @@ class Technology extends Model
     protected $fillable = [
         'technology'
     ];
+
+    public function portfolios(){
+        return $this->belongsToMany(Portfolio::class);
+    } 
 }
