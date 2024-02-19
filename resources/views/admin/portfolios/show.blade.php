@@ -18,6 +18,11 @@
                 <b>Type:</b> {{ $portfolio->type->name}}
             </p>
             <p>
+                <b>Technology:</b>
+                @foreach ($portfolio->technologies as $technology)
+                    {{ $technology->technology }} , 
+                 @endforeach            
+            <p>
                 <b>Author:</b> {{ $portfolio->Author }}
             </p>
             <p>

@@ -21,6 +21,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Type</th>
+                <th scope="col">Technology ID</th>
                 <th scope="col">Project</th>
                 <th scope="col">Author</th>
                 <th scope="col">Description</th>
@@ -39,6 +40,11 @@
                     </a>
                 </td>
                 {{-- MODIFICO DATI ALL'INTERNO DEL TYPE_ID IN MODO DA VISUALIZZARE IL CONTENUTO CHE MI INTERESSA --}}
+                <td>
+                    @foreach ($portfolio->technologies as $techno)
+                        {{ $techno->technology }} ,
+                    @endforeach
+                </td>
                 <td>
                     {{ $portfolio->type->name }}
                 </td>
